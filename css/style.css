@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#setup-container input[type="number"] {
+  font-size: 16px;
+  padding: 10px;
+  margin: 5px;
+  width: 60%;
+}
+
+#setup-container label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#start-game, #restart-game, #moves-container button, #game-container button {
+  font-size: 18px;
+  padding: 15px 30px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#start-game:hover, #restart-game:hover, #moves-container button:hover, #game-container button:hover {
+  background-color: #0056b3;
+}
+
+.battlefield {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.pokemon {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 40%;
+}
+
+#moves-container button {
+  text-transform: capitalize;
+}
