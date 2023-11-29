@@ -3,8 +3,8 @@ let playerRoster = [];
 let cpuRoster = [];
 let currentPlayerPokemonIndex = 0;
 let currentCpuPokemonIndex = 0;
-let playerPokemonCount = 3; // Default number, can be set by the user
-let cpuPokemonCount = 3; // Default number, can be set by the user
+let playerPokemonCount = 3;
+let cpuPokemonCount = 3;
 
 const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
@@ -42,9 +42,6 @@ const setupGame = () => {
 const fetchPokemon = async id => {
     try {
         const response = await fetch(`${API_BASE_URL}/pokemon/${id}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
         return await response.json();
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -129,7 +126,7 @@ const checkForFaintedPokemon = () => {
             currentPlayerPokemonIndex++;
             startBattle();
         } else {
-            endGame(false); // Player loses
+            endGame(false);
         }
     }
 
@@ -138,7 +135,7 @@ const checkForFaintedPokemon = () => {
             currentCpuPokemonIndex++;
             startBattle();
         } else {
-            endGame(true); // CPU loses
+            endGame(true);
         }
     }
 };
